@@ -41,13 +41,6 @@ This crate has no default features.
 pid = "4.1.0"
 ```
 
-Enable `serde` support when `Pid` needs to be serialized or deserialized:
-
-```toml
-[dependencies]
-pid = { version = "4.1.0", features = ["serde"] }
-```
-
 Enable `defmt` support when logging should be emitted through `defmt`:
 
 ```toml

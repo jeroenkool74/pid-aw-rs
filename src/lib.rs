@@ -164,12 +164,10 @@ pub struct Pid<T: Number> {
     /// Previously found measurement whilst using the [Pid::next_control_output] method.
     prev_measurement: Option<T>,
     /// Function that controls whether the next error is added to the integral term.
-    #[cfg_attr(feature = "serde", serde(skip))]
     conditional_integration: Option<AntiWindupCondition<T>>,
      /// Integrator leak multiplier for anti-windup.
     integrator_leak: Option<T>,
     /// Function that controls whether the integrator leak is applied.
-    #[cfg_attr(feature = "serde", serde(skip))]
     integrator_leak_condition: Option<AntiWindupCondition<T>>,
     /// Tracking time constant used for back-calculation anti-windup.
     tt: Option<T>,

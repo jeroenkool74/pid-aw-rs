@@ -30,4 +30,3 @@ optional = true
 [features]
 default = []
 defmt = ["dep:defmt"]
-serde = ["dep:serde"]
