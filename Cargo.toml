@@ -23,5 +23,11 @@ optional = true
 default-features = false
 features = ["derive"]
 
-[dependencies]
-defmt = "1.0.1"
+[dependencies.defmt]
+version = "1.0.1"
+optional = true
+
+[features]
+default = []
+defmt = ["dep:defmt"]
+serde = ["dep:serde"]
